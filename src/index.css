@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #002fd6;
+  --blue-600: #0026b0;
+  --blue-100: #e8ecff;
+  --ink: #0a0e1a;
+  --navy: #05103a;
+  --paper: #ffffff;
+  --paper-2: #f6f7fb;
+  --line: #e5e7ef;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-feature-settings: 'cv05', 'ss01';
+}
+
+::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* ---- Editorial primitives ---- */
+
+/* Stacked poster headline — tight Nordic grotesk */
+.poster {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+/* Eyebrow / overline label */
+.eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Hairline rule used between editorial blocks */
+.rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Grain overlay for any blue field (hero, dark sections). Adds the fine
+   "blue-noise / signal" texture. Layout + base color are owned by the
+   element's own classes/inline styles, NOT this class. Pure cobalt — no violet. */
+.noise-field {
+  isolation: isolate;
+}
+.noise-field::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Faint engineering grid backdrop (Blueprint accent) */
+.grid-bg {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: -1px -1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
