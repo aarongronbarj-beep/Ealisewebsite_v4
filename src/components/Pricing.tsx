@@ -2,12 +2,12 @@ import { Check } from 'lucide-react';
 import { Container, Eyebrow } from './primitives';
 import Reveal from './Reveal';
 
-/* NOTE: prices are editable placeholders — adjust to your real rates. */
+/* NOTE: prices are editable placeholders. Adjust to your real rates. */
 const PLANS = [
   {
     name: 'Website',
     price: 'from €390',
-    desc: 'A clean, fast, professional site — planned, built, launched and hosted.',
+    desc: 'A clean, fast, professional site, planned, built, launched and hosted.',
     features: [
       'Custom design, mobile-first',
       'Copy & on-page SEO basics',
@@ -20,7 +20,7 @@ const PLANS = [
   {
     name: 'Website + Data',
     price: 'from €690',
-    desc: 'Everything in Website, plus analytics and a chatbot wired in — with insight you can act on.',
+    desc: 'Everything in Website, plus analytics and a chatbot wired in, with insight you can act on.',
     features: [
       'Everything in Website',
       'Analytics + chatbot setup',
@@ -56,7 +56,7 @@ export default function Pricing() {
           </h2>
           <p className="mt-6 font-body text-base leading-relaxed text-ink/60">
             Start small with a website, or go all the way to a full system. Every
-            plan is a fixed, honest quote after a free call — no agency overhead.
+            plan is a fixed, honest quote after a free call. No agency overhead.
           </p>
         </Reveal>
 

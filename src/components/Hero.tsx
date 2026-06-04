@@ -50,7 +50,7 @@ export default function Hero() {
               className="mt-8 max-w-md font-body text-base leading-relaxed text-ink/65"
             >
               We build websites, turn data into insight, and automate the
-              repetitive — so you can focus on what matters. Built in Helsinki,
+              repetitive, so you can focus on what matters. Built in Helsinki,
               for businesses across Finland.
             </motion.p>
 

@@ -37,7 +37,7 @@ body {
 
 /* ---- Editorial primitives ---- */
 
-/* Stacked poster headline — tight Nordic grotesk */
+/* Stacked poster headline: tight Nordic grotesk */
 .poster {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
@@ -62,7 +62,7 @@ body {
 
 /* Grain overlay for any blue field (hero, dark sections). Adds the fine
    "blue-noise / signal" texture. Layout + base color are owned by the
-   element's own classes/inline styles, NOT this class. Pure cobalt — no violet. */
+   element's own classes/inline styles, NOT this class. Pure cobalt, no violet. */
 .noise-field {
   isolation: isolate;
 }
@@ -75,15 +75,6 @@ body {
   opacity: 0.35;
   z-index: 1;
   pointer-events: none;
-}
-
-/* Faint engineering grid backdrop (Blueprint accent) */
-.grid-bg {
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 64px 64px;
-  background-position: -1px -1px;
 }
 
 @media (prefers-reduced-motion: reduce) {

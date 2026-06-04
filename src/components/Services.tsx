@@ -6,7 +6,7 @@ const SERVICES = [
   {
     icon: Globe,
     title: 'Websites',
-    body: 'Custom-built, fast and easy to manage — from first plan through to launch and hosting. Sites that look great and get results.',
+    body: 'Custom-built, fast and easy to manage, from first plan through to launch and hosting. Sites that look great and get results.',
   },
   {
     icon: BarChart3,
@@ -16,7 +16,7 @@ const SERVICES = [
   {
     icon: Sparkles,
     title: 'AI Automation',
-    body: 'We find the repetitive work that eats your week and automate it with AI — so your time goes to customers, not busywork.',
+    body: 'We find the repetitive work that eats your week and automate it with AI, so your time goes to customers, not busywork.',
   },
 ];
 

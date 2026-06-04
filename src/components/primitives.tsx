@@ -44,7 +44,7 @@ type ButtonProps = {
   className?: string;
 };
 
-/** Primary action — square-ish Nordic button, blue solid by default. */
+/** Primary action: square-ish Nordic button, blue solid by default. */
 export function Button({
   children,
   href = '#',

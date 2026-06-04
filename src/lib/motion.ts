@@ -14,7 +14,7 @@ export function useStatic(): boolean {
   return Boolean(reduced) || flagged;
 }
 
-/** Standard calm reveal — y-rise + fade. Pair with useStatic(). */
+/** Standard calm reveal: y-rise + fade. Pair with useStatic(). */
 export const reveal = {
   hidden: { opacity: 0, y: 18 },
   show: { opacity: 1, y: 0 },

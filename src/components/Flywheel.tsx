@@ -6,7 +6,7 @@ const STEPS = [
   {
     n: '01',
     title: 'We build the website',
-    body: 'A fast, professional site — planned, designed, launched and hosted.',
+    body: 'A fast, professional site, planned, designed, launched and hosted.',
   },
   {
     n: '02',
@@ -27,7 +27,7 @@ const STEPS = [
 
 export default function Flywheel() {
   return (
-    <section className="grid-bg border-b border-line bg-paper-2 py-24 md:py-32">
+    <section className="border-b border-line bg-paper-2 py-24 md:py-32">
       <Container>
         <Reveal className="max-w-2xl">
           <Eyebrow>From complexity to clarity</Eyebrow>

@@ -5,16 +5,6 @@ import Reveal from './Reveal';
 export default function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden bg-blue py-28 md:py-36">
-      {/* faint engineering grid on the cobalt field */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.12]"
-        style={{
-          backgroundImage:
-            'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
-          backgroundSize: '64px 64px',
-        }}
-        aria-hidden
-      />
       <Container className="relative">
         <div className="grid gap-12 md:grid-cols-12 md:items-end">
           <div className="md:col-span-8">
@@ -25,7 +15,7 @@ export default function Contact() {
               </h2>
               <p className="mt-7 max-w-lg font-body text-base leading-relaxed text-white/80">
                 Book a free 15-minute call. We'll tell you exactly what your
-                business needs — no commitment, no pressure.
+                business needs. No commitment, no pressure.
               </p>
               <div className="mt-9">
                 <a

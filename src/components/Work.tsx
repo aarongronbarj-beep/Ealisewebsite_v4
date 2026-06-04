@@ -37,7 +37,7 @@ export default function Work() {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-line bg-paper-2">
                   <img
                     src={p.img}
-                    alt={`${p.name} — ${p.tag}`}
+                    alt={`${p.name}: ${p.tag}`}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   />
