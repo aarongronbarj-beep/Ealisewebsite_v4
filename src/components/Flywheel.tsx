@@ -27,7 +27,11 @@ const STEPS = [
 
 export default function Flywheel() {
   return (
-    <section className="border-b border-line bg-paper-2 py-24 md:py-32">
+    <section className="border-b border-line py-24 md:py-32" style={{
+        background: '#ffffff',
+        backgroundImage: 'linear-gradient(#e8e9ec 1px, transparent 1px), linear-gradient(90deg, #e8e9ec 1px, transparent 1px)',
+        backgroundSize: '48px 48px',
+      }}>
       <Container>
         <Reveal className="max-w-2xl">
           <Eyebrow>From complexity to clarity</Eyebrow>
@@ -37,20 +41,14 @@ export default function Flywheel() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-4">
+        <div className="mt-16 grid gap-4 md:grid-cols-4" style={{ animation: 'slideRight 3s ease-in-out infinite' }}>
           {STEPS.map((s, i) => (
             <Reveal
               key={s.n}
               delay={i * 0.08}
-              className="relative flex flex-col bg-paper p-7"
+              className="relative flex flex-col rounded-xl border border-line bg-paper p-7"
             >
-              <div className="flex items-center gap-3">
-                <span className="font-heading text-sm font-bold text-blue">{s.n}</span>
-                <span className="h-px flex-1 bg-line" />
-                {i < STEPS.length - 1 && (
-                  <ArrowRight className="h-4 w-4 text-ink/30" />
-                )}
-              </div>
+              <span className="font-heading text-sm font-semibold text-ink/40">{s.n}</span>
               <h3 className="mt-6 font-heading text-lg font-semibold leading-snug text-ink">
                 {s.title}
               </h3>
