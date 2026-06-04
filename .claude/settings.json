@@ -4,7 +4,11 @@
       "Bash(gh auth *)",
       "PowerShell($g = Get-Command gh -ErrorAction SilentlyContinue; if \\($g\\) { \"gh: $\\($g.Source\\)\"; gh auth status } else { \"gh not found\" }; \"---\"; git ls-remote https://github.com/aarongronbarj-beep/Ealisewebsite_v4.git 2>&1 | Select-Object -First 5)",
       "PowerShell(git init -b main)",
-      "PowerShell(git add -A)"
+      "PowerShell(git add -A)",
+      "PowerShell(git remote add origin https://github.com/aarongronbarj-beep/Ealisewebsite_v4.git)",
+      "PowerShell(git push -u origin main 2>&1)",
+      "PowerShell(\"---\")",
+      "PowerShell(git push 2>&1)"
     ]
   }
 }
