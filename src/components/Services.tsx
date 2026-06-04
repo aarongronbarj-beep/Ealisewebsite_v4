@@ -1,30 +1,8 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Container, Eyebrow } from './primitives';
 import Reveal from './Reveal';
-import { IMG } from '../lib/assets';
-
-const SERVICES = [
-  {
-    title: 'Websites',
-    body: 'Custom-built, fast and easy to manage — from first plan to launch and hosting.',
-    img: IMG.service.websites,
-  },
-  {
-    title: 'Data Analytics',
-    body: 'Analytics and a chatbot wired into your site, turned into plain-language insight.',
-    img: IMG.service.data,
-  },
-  {
-    title: 'AI Automation',
-    body: 'We automate the repetitive work that eats your week, so your time goes to customers.',
-    img: IMG.service.ai,
-  },
-  {
-    title: 'Graphic Design',
-    body: 'Logos, animated ads, banners and full rebrands — sharp, on-brand visuals ready to ship.',
-    img: IMG.service.design,
-  },
-];
+import { SERVICES } from '../lib/services';
 
 /** Subtle dotted texture behind each card, matching the reference layout. */
 const dots = {
@@ -51,9 +29,9 @@ export default function Services() {
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {SERVICES.map((s, i) => (
-            <Reveal key={s.title} delay={i * 0.08}>
-              <a
-                href="#contact"
+            <Reveal key={s.slug} delay={i * 0.08}>
+              <Link
+                to={`/services/${s.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-paper p-8 shadow-[0_1px_2px_rgba(10,14,26,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(10,14,26,0.08)]"
                 style={dots}
               >
@@ -75,12 +53,12 @@ export default function Services() {
                 <div className="mt-8 flex flex-1 items-end">
                   <img
                     src={s.img}
-                    alt={`${s.title} — work examples`}
+                    alt={`${s.title} work examples`}
                     loading="lazy"
                     className="w-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                   />
                 </div>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>

@@ -1,31 +1,41 @@
+import { useEffect } from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from 'react-router-dom';
 import Nav from './components/Nav';
-import Hero from './components/Hero';
-import LogoStrip from './components/LogoStrip';
-import Services from './components/Services';
-import Flywheel from './components/Flywheel';
-import DarkSignal from './components/DarkSignal';
-import Work from './components/Work';
-import Founders from './components/Founders';
-import Pricing from './components/Pricing';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import ServiceDetail from './pages/ServiceDetail';
+
+/** Jump to the top on route change, unless the URL targets an in-page anchor. */
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) return;
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
+  return null;
+}
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-paper">
-      <Nav />
-      <main>
-        <Hero />
-        <LogoStrip />
-        <Services />
-        <Flywheel />
-        <DarkSignal />
-        <Work />
-        <Founders />
-        <Pricing />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="min-h-screen bg-paper">
+        <Nav />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services/:slug" element={<ServiceDetail />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

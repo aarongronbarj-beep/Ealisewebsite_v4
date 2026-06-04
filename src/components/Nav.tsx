@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Button } from './primitives';
 import Wordmark from './Wordmark';
 
 const LINKS = [
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
-  { label: 'About', href: '#about' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Work', href: '/#work' },
+  { label: 'About', href: '/#about' },
+  { label: 'Pricing', href: '/#pricing' },
 ];
 
 export default function Nav() {
@@ -29,9 +30,9 @@ export default function Nav() {
       }`}
     >
       <Container className="flex h-16 items-center justify-between">
-        <a href="#top" aria-label="Ealize home">
+        <Link to="/" aria-label="Ealize home">
           <Wordmark showMark={false} />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {LINKS.map((l) => (
@@ -46,7 +47,7 @@ export default function Nav() {
         </nav>
 
         <div className="hidden md:block">
-          <Button href="#contact">Contact us</Button>
+          <Button href="/#contact">Contact us</Button>
         </div>
 
         <button
@@ -77,7 +78,7 @@ export default function Nav() {
                 {l.label}
               </a>
             ))}
-            <Button href="#contact" className="mt-2 justify-center">
+            <Button href="/#contact" className="mt-2 justify-center">
               Contact us
             </Button>
           </Container>

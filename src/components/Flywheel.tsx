@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react';
 import { Container, Eyebrow } from './primitives';
 import Reveal from './Reveal';
 

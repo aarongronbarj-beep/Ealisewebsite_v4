@@ -1,32 +1,38 @@
+import { Link } from 'react-router-dom';
 import { Container } from './primitives';
 import Wordmark from './Wordmark';
+import { SERVICES } from '../lib/services';
 
-const COLS = [
+type FooterLink = { label: string; to?: string; href?: string };
+
+const COLS: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Services',
-    links: [
-      { label: 'Websites', href: '#services' },
-      { label: 'Data Analytics', href: '#services' },
-      { label: 'AI Automation', href: '#services' },
-    ],
+    links: SERVICES.map((s) => ({
+      label: s.title,
+      to: `/services/${s.slug}`,
+    })),
   },
   {
     title: 'Company',
     links: [
-      { label: 'Work', href: '#work' },
-      { label: 'About', href: '#about' },
-      { label: 'Pricing', href: '#pricing' },
+      { label: 'Work', href: '/#work' },
+      { label: 'About', href: '/#about' },
+      { label: 'Pricing', href: '/#pricing' },
     ],
   },
   {
     title: 'Contact',
     links: [
       { label: 'hello@ealize.fi', href: 'mailto:hello@ealize.fi' },
-      { label: 'Book a call', href: '#contact' },
-      { label: 'Helsinki, Finland', href: '#' },
+      { label: 'Book a call', href: '/#contact' },
+      { label: 'Helsinki, Finland', href: '/#contact' },
     ],
   },
 ];
+
+const linkClass =
+  'font-body text-sm text-white/70 transition-colors hover:text-white';
 
 export default function Footer() {
   return (
@@ -34,7 +40,9 @@ export default function Footer() {
       <Container>
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Wordmark dark showMark={false} />
+            <Link to="/" aria-label="Ealize home">
+              <Wordmark dark showMark={false} />
+            </Link>
             <p className="mt-5 max-w-xs font-body text-sm leading-relaxed text-white/55">
               Websites, data analytics and AI automation for small businesses.
               Built in Helsinki, for all of Finland.
@@ -47,12 +55,15 @@ export default function Footer() {
               <ul className="mt-4 flex flex-col gap-3">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className="font-body text-sm text-white/70 transition-colors hover:text-white"
-                    >
-                      {l.label}
-                    </a>
+                    {l.to ? (
+                      <Link to={l.to} className={linkClass}>
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a href={l.href} className={linkClass}>
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
