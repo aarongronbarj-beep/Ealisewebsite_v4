@@ -8,7 +8,15 @@
       "PowerShell(git remote add origin https://github.com/aarongronbarj-beep/Ealisewebsite_v4.git)",
       "PowerShell(git push -u origin main 2>&1)",
       "PowerShell(\"---\")",
-      "PowerShell(git push 2>&1)"
+      "PowerShell(git push 2>&1)",
+      "PowerShell(git pull --rebase 2>&1)",
+      "mcp__claude_ai_Higgsfield__generate_image",
+      "mcp__claude_ai_Higgsfield__job_status",
+      "PowerShell($root = \"C:\\\\Users\\\\aaron\\\\Desktop\\\\Nettisivujenluominen - Copy\\\\ealize-nordic\"; Get-Content \"$root\\\\package.json\" | ConvertFrom-Json | Select-Object -ExpandProperty scripts)",
+      "PowerShell(npm run build 2>&1)",
+      "PowerShell(\"cleaned\")",
+      "PowerShell(git add src/components/Services.tsx src/lib/assets.ts .gitignore \"public/images/service-ai.webp\" \"public/images/service-data.webp\" \"public/images/service-design.webp\" \"public/images/service-websites.webp\" .claude/settings.json)",
+      "PowerShell($root = \"C:\\\\Users\\\\aaron\\\\Desktop\\\\Nettisivujenluominen - Copy\\\\ealize-nordic\")"
     ]
   }
 }

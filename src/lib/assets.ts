@@ -5,4 +5,11 @@ export const IMG = {
   work: ['/images/work-1.webp', '/images/work-2.webp', '/images/work-3.webp'],
   // Placeholder: replace with a real photo of the two founders.
   founders: '/images/founders.webp',
+  // Higgsfield-generated fanned-mockup visuals, one per service card.
+  service: {
+    websites: '/images/service-websites.webp',
+    data: '/images/service-data.webp',
+    ai: '/images/service-ai.webp',
+    design: '/images/service-design.webp',
+  },
 };
