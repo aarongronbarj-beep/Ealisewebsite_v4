@@ -1,4 +1,4 @@
-import { Globe, BarChart3, Sparkles, ArrowUpRight } from 'lucide-react';
+import { Globe, BarChart3, Sparkles, PenTool, ArrowUpRight } from 'lucide-react';
 import { Container, Eyebrow } from './primitives';
 import Reveal from './Reveal';
 
@@ -18,6 +18,11 @@ const SERVICES = [
     title: 'AI Automation',
     body: 'We find the repetitive work that eats your week and automate it with AI, so your time goes to customers, not busywork.',
   },
+  {
+    icon: PenTool,
+    title: 'Graphic Design',
+    body: 'Logos, animated ads, banners and full rebrands. Sharp, on-brand visuals ready to ship across every channel.',
+  },
 ];
 
 export default function Services() {
@@ -29,14 +34,14 @@ export default function Services() {
             <Reveal>
               <Eyebrow>How we help</Eyebrow>
               <h2 className="poster mt-6 text-[clamp(2.25rem,5vw,3.5rem)] text-ink">
-                Three things.
+                Four things.
                 <br />
                 One solution.
               </h2>
               <p className="mt-6 max-w-sm font-body text-base leading-relaxed text-ink/60">
-                Websites that convert. Data that tells you what to do next.
-                Automation that gives you your time back. Together, not in
-                separate silos.
+                Websites that convert. Design that gets noticed. Data that tells
+                you what to do next. Automation that gives you your time back.
+                Together, not in separate silos.
               </p>
             </Reveal>
           </div>
