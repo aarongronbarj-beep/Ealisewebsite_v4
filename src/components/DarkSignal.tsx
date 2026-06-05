@@ -28,9 +28,10 @@ export default function DarkSignal() {
               Data without insight is just noise.
             </h2>
             <p className="mt-7 max-w-md font-body text-base leading-relaxed text-white/70">
-              We turn the numbers your site collects into clear answers: what
-              your customers do, what works, and what to change next. So every
-              decision is backed by evidence, not guesswork.
+              We connect the tools your business already uses with the visitor
+              data from the website we build, then turn it all into clear
+              answers: where customers come from, what works, and what to change
+              next. So every decision is backed by evidence, not guesswork.
             </p>
             <div className="mt-9">
               <Button href="#services" variant="white">

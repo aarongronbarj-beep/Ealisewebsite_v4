@@ -50,25 +50,25 @@ export const SERVICES: Service[] = [
     icon: BarChart3,
     img: IMG.service.data,
     title: 'Data Analytics',
-    body: 'Analytics and a chatbot wired into your site, turned into plain-language insight.',
+    body: 'We connect the tools you already use with visitor data from your site, turned into one clear, plain-language picture.',
     intro:
-      'We wire analytics and a chatbot into your site, then turn the numbers into plain-language insight you can actually act on.',
+      'We plug into the tools your business already runs on and combine them with live visitor data from the website we build, then turn it all into plain-language insight you can act on.',
     features: [
       {
-        title: 'Analytics setup',
-        body: 'Tracking configured properly so the data you collect is trustworthy.',
+        title: 'Tool integrations',
+        body: 'We connect your CRM, POS, email, ads and accounting tools so all your data lives in one place.',
       },
       {
-        title: 'Behaviour insight',
-        body: 'See where customers come from and exactly where they drop off.',
+        title: 'Website visitor data',
+        body: 'Every site we build feeds in real visitor behaviour: where people come from and what they do.',
       },
       {
-        title: 'Chatbot capture',
-        body: 'A smart chatbot that answers questions and captures intent 24/7.',
+        title: 'One unified view',
+        body: 'Business tools and site analytics combined, so you see the full customer journey, not scattered fragments.',
       },
       {
-        title: 'Monthly reports',
-        body: 'Clear reports that tell you what to do next, not just charts.',
+        title: 'Insight you can act on',
+        body: 'Clear, plain-language reports that tell you what to do next, not just charts.',
       },
     ],
   },

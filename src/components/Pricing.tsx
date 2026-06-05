@@ -6,26 +6,28 @@ import Reveal from './Reveal';
 const PLANS = [
   {
     name: 'Website',
-    price: 'from €390',
+    price: 'from €199',
+    note: '+ maintenance',
     desc: 'A clean, fast, professional site, planned, built, launched and hosted.',
     features: [
       'Custom design, mobile-first',
       'Copy & on-page SEO basics',
       'Hosting & domain setup',
-      'One round of revisions',
+      'Ongoing maintenance available',
     ],
     featured: false,
     cta: 'Start a project',
   },
   {
     name: 'Website + Data',
-    price: 'from €690',
-    desc: 'Everything in Website, plus analytics and a chatbot wired in, with insight you can act on.',
+    price: 'from €199',
+    note: '+ €50 / month for analysis',
+    desc: 'Everything in Website, plus your tools and site visitor data combined into insight you can act on.',
     features: [
       'Everything in Website',
-      'Analytics + chatbot setup',
+      'Business tool integrations',
+      'Website visitor tracking',
       'Monthly insight report',
-      'Behaviour & drop-off tracking',
     ],
     featured: true,
     cta: 'Most popular',
@@ -33,12 +35,13 @@ const PLANS = [
   {
     name: 'Full System',
     price: 'Custom',
-    desc: 'Websites, data and AI automation working together, surfaced in one dashboard.',
+    desc: 'Everything in Website + Data, plus AI automation and analysis across all of your business data, in one dashboard.',
     features: [
       'Everything in Website + Data',
       'AI automation of recurring tasks',
-      'Unified dashboard',
-      'Priority support',
+      'All your business data, not just the website',
+      'Marketing, income, competitor analysis & forecasts',
+      'Unified dashboard & priority support',
     ],
     featured: false,
     cta: 'Book a call',
@@ -79,6 +82,15 @@ export default function Pricing() {
                   )}
                 </div>
                 <div className="mt-5 font-heading text-3xl font-bold">{p.price}</div>
+                {p.note && (
+                  <div
+                    className={`mt-1 font-body text-sm ${
+                      p.featured ? 'text-white/70' : 'text-ink/50'
+                    }`}
+                  >
+                    {p.note}
+                  </div>
+                )}
                 <p
                   className={`mt-4 font-body text-[15px] leading-relaxed ${
                     p.featured ? 'text-white/80' : 'text-ink/60'
