@@ -25,39 +25,62 @@ export default function ServiceDetail() {
       {/* Hero */}
       <section className="border-b border-line bg-paper-2 pt-28 pb-20 md:pt-36 md:pb-28">
         <Container>
-          <Reveal className="max-w-2xl">
-            <Link
-              to="/#services"
-              className="group inline-flex items-center gap-2 font-body text-sm text-ink/60 transition-colors hover:text-blue"
-            >
-              <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
-              All services
-            </Link>
+          <div className={service.slug === 'websites' ? 'flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16' : ''}>
+            <Reveal className={service.slug === 'websites' ? 'lg:w-5/12 shrink-0' : 'max-w-2xl'}>
+              <Link
+                to="/#services"
+                className="group inline-flex items-center gap-2 font-body text-sm text-ink/60 transition-colors hover:text-blue"
+              >
+                <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
+                All services
+              </Link>
 
-            <span className="mt-8 grid h-14 w-14 place-items-center rounded-xl bg-blue-100 text-blue">
-              <service.icon className="h-7 w-7" strokeWidth={1.75} />
-            </span>
+              <div className="mt-8">
+                <Eyebrow>{service.title}</Eyebrow>
+              </div>
+              <h1 className="poster mt-5 text-[clamp(2.5rem,6vw,4.25rem)] text-ink">
+                {service.title}.
+              </h1>
+              <p className="mt-6 font-body text-lg leading-relaxed text-ink/65">
+                {service.intro}
+              </p>
 
-            <div className="mt-6">
-              <Eyebrow>{service.title}</Eyebrow>
+              <div className="mt-9 flex flex-wrap items-center gap-4">
+                <Button href="/#contact">
+                  Book a free call
+                  <ArrowUpRight className="h-4 w-4" />
+                </Button>
+                <Button href="/#pricing" variant="outline">
+                  See pricing
+                </Button>
+              </div>
+            </Reveal>
+
+            {service.slug === 'websites' && (
+              <Reveal delay={0.15} className="lg:flex-1 min-w-0">
+                <div className="overflow-hidden rounded-2xl border border-line shadow-xl">
+                  <img
+                    src="/images/service-websites-hero.png"
+                    alt="Website design mockups"
+                    className="w-full"
+                  />
+                </div>
+              </Reveal>
+            )}
+          </div>
+
+          {service.slug === 'websites' && (
+            <div className="mt-16 overflow-hidden rounded-2xl border border-line">
+              <video
+                src="/animationwebdesign.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full"
+              />
             </div>
-            <h1 className="poster mt-5 text-[clamp(2.5rem,6vw,4.25rem)] text-ink">
-              {service.title}.
-            </h1>
-            <p className="mt-6 font-body text-lg leading-relaxed text-ink/65">
-              {service.intro}
-            </p>
-
-            <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Button href="/#contact">
-                Book a free call
-                <ArrowUpRight className="h-4 w-4" />
-              </Button>
-              <Button href="/#pricing" variant="outline">
-                See pricing
-              </Button>
-            </div>
-          </Reveal>
+          )}
         </Container>
       </section>
 
